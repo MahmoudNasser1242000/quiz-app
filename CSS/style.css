@@ -166,3 +166,7 @@ body {
 .question i {
     cursor: pointer;
 }
+
+.alert-danger {
+    display: none;
+}
