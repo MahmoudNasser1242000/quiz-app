@@ -1,3 +1,4 @@
+import { Qusestions } from "./questions.js";
 export class StratQuiz {
     constructor() {
         this.category = document.querySelector("#categoryMenu");
@@ -6,15 +7,18 @@ export class StratQuiz {
         document
             .querySelector("#startQuiz")
             .addEventListener("click", this.startQuiz.bind(this));
-        this.questions;
     }
 
     async startQuiz() {
-        if (!this.questionsNumber.value) {
-            $(".alert-danger").fadeIn(800);
-        } else {
+        if (Number(this.questionsNumber.value)) {
             $(".alert-danger").fadeOut(800);
-            this.questions = await this.getQuizes();
+            const questions = await this.getQuizes();
+            new Qusestions(questions);
+
+            document.querySelector(".start-quiz").classList.replace("d-block", "d-none")
+            document.querySelector(".questions-container").classList.replace("d-none", "d-block")
+        } else {
+            $(".alert-danger").fadeIn(800);
         }
     }
 

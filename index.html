@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <form
-                    class="start-quiz col-lg-8 offset-lg-2 d-flex flex-column gap-3 animate__animated animate__fadeInBottomLeft animate__delay-1s"
+                    class="start-quiz d-block col-lg-8 offset-lg-2 d-flex flex-column gap-3 animate__animated animate__fadeInBottomLeft animate__delay-1s"
                     id="quizOptions">
                     <div class="form-floating">
                         <select class="form-select" id="categoryMenu" aria-label="category Select">
@@ -64,7 +64,7 @@
 
                     <div class="form-floating">
                         <input type="number" class="form-control" id="questionsNumber"
-                            placeholder="Number of Questions" />
+                            placeholder="Number of Questions" min="1"/>
                         <label for="QuestionsNumber">Number of Questions</label>
                     </div>
 
@@ -77,16 +77,16 @@
                     </div>
                 </form>
 
-                <div class="questions-container">
-
+                <div class="questions-container d-none">
+                    
                 </div>
             </div>
         </div>
     </main>
     <!--!========> JS Main file <========-->
     <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/questions.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
-    <script src="./js/question.js" type="module"></script>
 </body>
 
 </html>
