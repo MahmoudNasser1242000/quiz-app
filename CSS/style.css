@@ -128,7 +128,7 @@ body {
 }
 
 /* ======> Question Card */
-.question {
+.question, .final-result {
     background-color: #fff;
     position: relative;
 }
