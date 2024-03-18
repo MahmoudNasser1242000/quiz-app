@@ -25,7 +25,7 @@ export class Qusestions {
                 .reverse();
 
             document.querySelector(".questions-container").innerHTML = `<div
-            class="question shadow-lg col-lg-6 offset-lg-3  p-4 rounded-3 d-flex flex-column justify-content-center align-items-center gap-3 animate__animated animate__bounceIn">
+            class="question shadow-lg col-lg-8 offset-lg-2  p-4 rounded-3 d-flex flex-column justify-content-center align-items-center gap-3 animate__animated animate__bounceIn">
             <div class="w-100 d-flex justify-content-between">
                 <span class="btn btn-category">${this.qusestions[this.currentQuiz]?.category
                 }</span>

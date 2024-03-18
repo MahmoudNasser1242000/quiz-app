@@ -11,13 +11,15 @@ export class FinalRsult {
 
     showResults() {
         document.querySelector(".questions-container").innerHTML = `
-            <div class="animate__animated animate__backInDown final-result shadow-lg col-lg-6 offset-lg-3 p-4 rounded-3 gap-3">
-                ${this.userScore === this.finalResult.length
-                ? "<h3 class='text-center text-success pb-4'>🎉 Congratulations, You Answered All Questions</h3>"
-                : this.userScore === 0
-                    ? "<h3 class='text-center text-danger pb-4'>❌ You Didn't Answer Any Question (يا فااااشل)</h3>"
-                    : `<h3 class='text-center text-dark pb-4'>👌 Your Score IS: ${this.userScore}</h3>`
-            }
+            <div class="animate__animated animate__backInDown final-result shadow-lg col-lg-8 offset-lg-2 p-4 rounded-3 gap-3">
+                <div class='d-flex justify-content-center align-items-center'>
+                    ${this.userScore === this.finalResult.length
+                        ? "<h3 class='text-center text-success py-4'>🎉 Congratulations, You Answered All Questions</h3>"
+                        : this.userScore === 0
+                            ? "<h3 class='text-center text-danger pb-4'>❌ You Didn't Answer Any Question (يا فااااشل)</h3>"
+                            : `<h3 class='text-center text-dark pb-4'>👌 Your Score IS: (<span class='text-success'>${this.userScore}</span> / ${this.finalResult.length})</h3>`
+                    }
+                </div>
 
                 <ul>
                     ${this.finalResult.map((quiz) => {
