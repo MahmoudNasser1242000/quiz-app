@@ -128,7 +128,12 @@ body {
 }
 
 /* ======> Question Card */
-.question, .final-result {
+.questions-container {
+    min-height: 330px;
+}
+
+.question,
+.final-result {
     background-color: #fff;
     position: relative;
 }
@@ -169,4 +174,33 @@ body {
 
 .alert-danger {
     display: none;
+}
+
+.final-result {
+    padding-top: 50px;
+    height: 330px;
+    overflow-y: auto;
+}
+
+.final-result::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+/* Define the thumb style */
+.final-result::-webkit-scrollbar-thumb {
+    margin-top: 5px;
+    background: #38369a;
+}
+
+/* Define the track style */
+.final-result::-webkit-scrollbar-track:vertical {
+    background-color: #38369a9d;
+    /* box-shadow: inset 0 0 2px 2px gainsboro; */
+}
+
+.final-result h3 {
+    font-family: "Sofadi One", system-ui !important;
+    font-weight: 400;
+    font-style: normal;
 }

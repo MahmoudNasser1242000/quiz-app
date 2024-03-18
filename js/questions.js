@@ -42,7 +42,7 @@ export class Qusestions {
                     .join("")}
             </ul>
             <h2 class="text-capitalize text-center score-color h3 fw-bold timer">
-                
+                ⏱︎ 00:00
             </h2>
         </div>`;
         } else {
@@ -77,6 +77,7 @@ export class Qusestions {
                 e.target.innerText
             );
         } else {
+            this.currentQuiz = 0
             new FinalRsult(this.finishAnswer, this.score);
         }
     }
@@ -105,6 +106,7 @@ export class Qusestions {
 
             setTimeout(() => {
                 this.nextQuestion(correctAnswer, userAnswer);
+                this.timer = 0
             }, 500);
         }, 1000);
     }
@@ -132,6 +134,7 @@ export class Qusestions {
                 }
             } else {
                 clearInterval(time);
+                this.currentQuiz = 0
                 new FinalRsult(this.finishAnswer, this.score);
             }
         }, 1000);
